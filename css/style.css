@@ -377,7 +377,7 @@ body{
 	.info .footerleft {width: 37%;}
 }
 
-@media screen and (max-width: 980px){
+@media screen and (max-width: 935px){
 	.footerleft .social .submit {margin: 10px 0;}
 }
 
