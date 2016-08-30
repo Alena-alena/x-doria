@@ -95,11 +95,3 @@ border:none;
 .sliderContent {width: 100%;}
 .sliderContent .items {width: 100%;}
 }
-
-@media screen and (max-width: 992px){
-.sliderContent{height: 400px;}
-}
-
-@media screen and (max-width: 768px){
-.sliderContent{height: 300px;}
-}

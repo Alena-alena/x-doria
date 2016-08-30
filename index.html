@@ -14,7 +14,9 @@
 		<div class="nav">
 			<img id="logo" src="img/logo_fix.png" alt="">
 			<div id="menu-small">
-				<img src="E:/front-end/x-doria/img/menu.jpg" alt="">
+				<a href="#">
+					<img src="A:/front-end/x-doria/img/menu.jpg" alt="">
+				</a>
 			</div>
 			<ul class="menu" id="menu-large">
 				<li><a href="#">SHOP</a>
@@ -36,18 +38,19 @@
 				<li><a href="#">CONTACT</a></li>
 			</ul>
 		</div>
-		<div class="top-icon">
 		<div class="item">
 			<a href="#">
 				<img src="img/item.png" alt="">
 			</a>
 				<p>0</p>
-		</div><div class="search">
+		</div>
+	
+		<div class="search">
 			<a href="#">
 				<img src="img/search.png" alt="">
 			</a>
 		</div>
-		</div>
+
 		<div class="item-message">
 			<p>It appears that your cart is currently empty!</p>
 			<div>Continue shopping</div>
@@ -62,16 +65,16 @@
 
 	<div class="main">
 		
-		<div class="slider">
+		<div class="slider" style="display:none">
 			<div class="sliderContent">
 				<div class="items">
-					<img src="E:/front-end/x-doria/img/slideshow_1.jpg" alt="" />
+					<img src="A:/front-end/x-doria/img/slideshow_1.jpg" alt="" />
 				</div>
 				<div class="items">
-					<img src="E:/front-end/x-doria/img/slideshow_2.jpg" alt="" />
+					<img src="A:/front-end/x-doria/img/slideshow_2.jpg" alt="" />
 				</div>
 				<div class="items">
-					<img src="E:/front-end/x-doria/img/slideshow_3.jpg" alt="" />
+					<img src="A:/front-end/x-doria/img/slideshow_3.jpg" alt="" />
 				</div>
 			</div>
 		</div>
@@ -176,15 +179,22 @@
 	<script type="text/javascript">
 		$(function(){
 			var b = false;
+			/*if($(window).width() >= '650'){
+				$('#menu-hidden').css('display','none');
+			}*/
+
+			/*if($(window).width() >= '1220'){
+				$('.main').css('padding-top','50px');
+			}*/
 
 			$('#menu-small').click(function(){
 				if (b === false) {
 				$('#menu-hidden').css('display','block');
-				$('.main').css('padding-top','105px');
+				$('.main').css('padding-top','100px');
 				b = true;
 				}else{
 				$('#menu-hidden').css('display','none');
-				$('.main').css('padding-top','50px');
+				$('.main').css('padding-top','10px');
 				b = false;
 				}
 			});
@@ -195,14 +205,14 @@
 				function(){
 				$(this).children('ul').stop(false, true).fadeOut(300);
 				});
-			if(document.documentElement.clientWidth > '650'){
-				$('.item').hover(function(){
-					$('.item-message').stop(false, true).fadeIn(300);
-					},
-					function(){
-					$('.item-message').stop(false, true).fadeOut(300);
-					});
-			}
+
+			$('.item').hover(function(){
+				$('.item-message').stop(false, true).fadeIn(300);
+				},
+				function(){
+				$('.item-message').stop(false, true).fadeOut(300);
+				});
+
 		});
 	</script>
 </body>
